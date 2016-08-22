@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res/com.moongoal.golfscore"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<com.admob.android.ads.AdView
+      android:id="@+id/ad"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      myapp:backgroundColor="#000000"
+      myapp:primaryTextColor="#FFFFFF"
+      myapp:secondaryTextColor="#CCCCCC"
+/>
+
+
+<Button android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:clickable="false" 
+		android:text="@string/hole" 
+		android:layout_weight="0.3" 
+		android:id="@+id/buttonHole"
+		android:layout_below="@id/ad"
+		></Button>
+
+<TextView 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="1" 
+		android:gravity="center_vertical|center_horizontal"
+		android:textSize="24sp" 
+		android:id="@+id/current_hole" 
+		android:layout_toRightOf="@id/buttonHole" 
+		android:layout_below="@id/ad"
+		android:minWidth="50sp"></TextView>
+		
+		
+<Button android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:clickable="false" 
+		android:text="Plus" 
+		android:layout_weight="0.3" 
+		android:id="@+id/buttonPlus"
+		android:layout_below="@id/ad"
+		android:layout_toRightOf="@id/current_hole"
+		></Button>	
+		
+<Button android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="Minus" 
+		android:layout_weight="0.3" 
+		android:id="@+id/buttonMinus"
+		android:layout_below="@id/ad"
+		android:layout_toRightOf="@id/buttonPlus"></Button>
+<TextView 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="0" 
+		android:textSize="24sp" 
+		android:id="@+id/TextViewScore" 
+		android:layout_weight="0.2" 
+		android:gravity="center" 
+		android:minWidth="50sp"
+		android:layout_below="@id/ad"
+		android:layout_toRightOf="@id/buttonMinus"></TextView>
+<Button android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="Ok" 
+		android:id="@+id/buttonOk"
+		android:layout_below="@id/ad"
+		android:layout_toRightOf="@id/TextViewScore"></Button>
+
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 1=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_1"
+		  android:layout_below="@id/buttonOk" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_1"
+		  android:layout_below="@id/buttonOk" 
+		  android:layout_toRightOf="@id/hole_1"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>	  
+  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 10=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_10" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"
+		  android:layout_toRightOf="@id/score_hole_1"
+		  android:layout_below="@id/buttonOk"></TextView>	
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_10"
+		  android:layout_below="@id/buttonOk"
+		  android:layout_toRightOf="@id/hole_10" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 2=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_2"
+		  android:layout_below="@id/score_hole_10" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_2"
+		  android:layout_below="@id/score_hole_10" 
+		  android:layout_toRightOf="@id/hole_2"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>	  
+  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 11=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_11" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"
+		  android:layout_toRightOf="@id/score_hole_2"
+		  android:layout_below="@id/score_hole_10"></TextView>	
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_11"
+		  android:layout_below="@id/score_hole_10"
+		  android:layout_toRightOf="@id/hole_11" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 3=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_3"
+		  android:layout_below="@id/score_hole_11" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_3"
+		  android:layout_below="@id/score_hole_11" 
+		  android:layout_toRightOf="@id/hole_3"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>	  
+  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 12=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_12" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"
+		  android:layout_toRightOf="@id/score_hole_3"
+		  android:layout_below="@id/score_hole_11"></TextView>	
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_12"
+		  android:layout_below="@id/score_hole_11"
+		  android:layout_toRightOf="@id/hole_12" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 4=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_4"
+		  android:layout_below="@id/score_hole_12" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_4"
+		  android:layout_below="@id/score_hole_12" 
+		  android:layout_toRightOf="@id/hole_4"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>	  
+  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 13=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_13" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"
+		  android:layout_toRightOf="@id/score_hole_4"
+		  android:layout_below="@id/score_hole_12"></TextView>	
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_13"
+		  android:layout_below="@id/score_hole_12"
+		  android:layout_toRightOf="@id/hole_13" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 5=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_5"
+		  android:layout_below="@id/score_hole_13" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_5"
+		  android:layout_below="@id/score_hole_13" 
+		  android:layout_toRightOf="@id/hole_5"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>	  
+  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 14=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_14" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"
+		  android:layout_toRightOf="@id/score_hole_5"
+		  android:layout_below="@id/score_hole_13"></TextView>	
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_14"
+		  android:layout_below="@id/score_hole_13"
+		  android:layout_toRightOf="@id/hole_14" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 6=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_6"
+		  android:layout_below="@id/score_hole_14" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_6"
+		  android:layout_below="@id/score_hole_14" 
+		  android:layout_toRightOf="@id/hole_6"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>	  
+  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 15=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_15" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"
+		  android:layout_toRightOf="@id/score_hole_6"
+		  android:layout_below="@id/score_hole_14"></TextView>	
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_15"
+		  android:layout_below="@id/score_hole_14"
+		  android:layout_toRightOf="@id/hole_15" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 7=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_7"
+		  android:layout_below="@id/score_hole_15" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_7"
+		  android:layout_below="@id/score_hole_15" 
+		  android:layout_toRightOf="@id/hole_7"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>	  
+  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 16=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_16" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"
+		  android:layout_toRightOf="@id/score_hole_7"
+		  android:layout_below="@id/score_hole_15"></TextView>	
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_16"
+		  android:layout_below="@id/score_hole_15"
+		  android:layout_toRightOf="@id/hole_16" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 8=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_8"
+		  android:layout_below="@id/hole_16" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_8"
+		  android:layout_below="@id/hole_16" 
+		  android:layout_toRightOf="@id/hole_8"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>	  
+  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 17=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_17" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"
+		  android:layout_toRightOf="@id/score_hole_8"
+		  android:layout_below="@id/hole_16"></TextView>	
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_17"
+		  android:layout_below="@id/hole_16"
+		  android:layout_toRightOf="@id/hole_17" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 9=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_9"
+		  android:layout_below="@id/hole_8" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_9"
+		  android:layout_below="@id/hole_8" 
+		  android:layout_toRightOf="@id/hole_9"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>	  
+  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Hole 18=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/hole_18" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"
+		  android:layout_toRightOf="@id/score_hole_9"
+		  android:layout_below="@id/hole_8"></TextView>	
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/score_hole_18"
+		  android:layout_below="@id/hole_8"
+		  android:layout_toRightOf="@id/hole_18" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="1st=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/first_nine_total_text"
+		  android:layout_below="@id/hole_9"
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/first_nine_total"
+		  android:layout_below="@id/hole_9"
+		  android:layout_toRightOf="@id/first_nine_total_text" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="2nd=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/second_nine_total_text"
+		  android:layout_below="@id/hole_9"
+		  android:layout_toRightOf="@id/first_nine_total" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/second_nine_total"
+		  android:layout_below="@id/hole_9"
+		  android:layout_toRightOf="@id/second_nine_total_text" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+		  
+		  
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="Tot=" 
+		  android:textSize="24sp" 
+		  android:id="@+id/total_text"
+		  android:layout_below="@id/hole_9"
+		  android:layout_toRightOf="@id/second_nine_total" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+<TextView android:layout_width="wrap_content" 
+		  android:layout_height="wrap_content" 
+		  android:text="0" 
+		  android:textSize="24sp" 
+		  android:id="@+id/grand_total"
+		  android:layout_below="@id/hole_9"
+		  android:layout_toRightOf="@id/total_text" 
+		  android:layout_weight="0.2" 
+		  android:minWidth="50sp"></TextView>
+
+
+<com.moongoal.golfscore.LoginButton
+        android:id="@+id/login"
+        android:src="@drawable/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/grand_total"
+		 
+        />
+        
+<Button android:id="@+id/postButton" 
+        android:text="@string/post"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:paddingRight="20sp" 
+        android:paddingLeft="20sp"
+        android:layout_below="@id/grand_total"
+		android:layout_toRightOf="@id/login"  
+		/>         
+
+</RelativeLayout>
+
+
+

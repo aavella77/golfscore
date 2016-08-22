@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hole">Hole +</string>
+    <string name="title">Welcome to Golf Score!</string>
+    <string name="app_name">Golf Score</string>
+<string name="post">Post to Facebook</string>
+</resources>
